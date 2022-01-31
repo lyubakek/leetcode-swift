@@ -10,7 +10,7 @@ class Solution {
         
         while !firstNum.isEmpty || !secondNum.isEmpty {
             let valueFirst = firstNum.isEmpty ? "0" : firstNum.removeLast()
-            let valueSecond =  secondNum.isEmpty ? "0" : secondNum.removeLast()
+            let valueSecond = secondNum.isEmpty ? "0" : secondNum.removeLast()
             let sum = Int(String(valueFirst))! + Int(String(valueSecond))! + carry
             
             result.append("\(sum%10)")

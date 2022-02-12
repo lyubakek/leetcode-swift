@@ -15,3 +15,19 @@ class Solution {
         return index
     }
 }
+
+
+// solution using set
+
+class Solution {
+    func missingNumber(_ nums: [Int]) -> Int {
+        let set: Set<Int> = Set(nums)
+        
+        for i in 0...set.count {
+            if !set.contains(i) {
+                return i
+            }
+        }
+        return 0
+    }
+}

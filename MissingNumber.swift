@@ -16,7 +16,6 @@ class Solution {
     }
 }
 
-
 // solution using set
 
 class Solution {
@@ -29,5 +28,37 @@ class Solution {
             }
         }
         return 0
+    }
+}
+
+// faster solution using sum
+
+class Solution {
+    func missingNumber(_ nums: [Int]) -> Int {
+        let sumActual = nums.reduce(0, +)
+        var sumExpected = 0
+        
+        for i in 0...nums.count {
+            sumExpected += i
+        }
+        return sumExpected - sumActual
+    }
+}
+
+// using Gauss formula
+
+class Solution {
+    func missingNumber(_ nums: [Int]) -> Int {
+        let sumActual = nums.reduce(0, +)
+        let sumExpected = nums.count * (nums.count + 1) / 2
+        return sumExpected - sumActual
+    }
+}
+
+// one line solution
+
+class Solution {
+    func missingNumber(_ nums: [Int]) -> Int {
+        return (nums.count * (nums.count + 1) / 2) - nums.reduce(0, +)
     }
 }

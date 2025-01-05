@@ -1,5 +1,11 @@
-// Question link: https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
+# Find Numbers with Even Number of Digits
 
+Given an array nums of integers, return how many of them contain an even number of digits.
+
+
+Solution:
+
+```Swift
 class Solution {
     func findNumbers(_ nums: [Int]) -> Int {
         var countEvenNumbers = 0
@@ -18,3 +24,8 @@ class Solution {
         return countEvenNumbers
     }
 }
+```
+
+https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
+
+

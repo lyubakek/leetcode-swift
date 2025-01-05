@@ -1,5 +1,10 @@
-// Question link: https://leetcode.com/problems/max-consecutive-ones/
+# Max Consecutive Ones
 
+Given a binary array nums, return the maximum number of consecutive 1's in the array.
+
+Solution:
+
+```Swift
 class Solution {
     func findMaxConsecutiveOnes(_ nums: [Int]) -> Int {
         var max = 0
@@ -18,3 +23,6 @@ class Solution {
         return max
     }
 }
+```
+
+https://leetcode.com/problems/max-consecutive-ones/

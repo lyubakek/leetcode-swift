@@ -34,5 +34,39 @@ class Solution {
     }
 }
 ```
+Solution 2:
+
+```Swift
+class Solution {
+    func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
+        var indexRight = n - 1
+        var indexLeft = m - 1
+        
+        while indexRight >= 0 {
+            if indexRight < 0 {
+                takeLeft()
+            } else if indexLeft < 0 {
+                takeRight()
+            } else {
+                if nums1[indexLeft] > nums2[indexRight] {
+                    takeLeft()
+                } else {
+                    takeRight()
+                }
+            }
+        }
+        
+        func takeLeft() {
+            nums1[indexLeft + indexRight + 1] = nums1[indexLeft]
+            indexLeft -= 1
+        }
+        
+        func takeRight() {
+            nums1[indexLeft + indexRight + 1] = nums2[indexRight]
+            indexRight -= 1
+        }
+    }
+}
+```
 
 https://leetcode.com/problems/merge-sorted-array/

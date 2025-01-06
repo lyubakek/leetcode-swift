@@ -27,4 +27,4 @@ class Solution {
 }
 ```
 
-[https://leetcode.com/problems/height-checker/](https://leetcode.com/problems/duplicate-zeros/)
+https://leetcode.com/problems/duplicate-zeros/
